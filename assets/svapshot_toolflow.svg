@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="svapflow" viewBox="0 0 1040 1210" width="1040" height="1210" role="img" aria-label="SVApshot toolflow: generation, qualification, repair, snapshot and mutation-validated evaluation">
+<style>
+  #svapflow .t   { font: 600 13.5px -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #1a1a1a; }
+  #svapflow .s   { font: 10.5px -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #4a5560; }
+  #svapflow .hdr { font: 700 14px -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #1a1a1a; }
+  #svapflow .lbl { font: 10.5px -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #55606c; }
+  #svapflow .pill{ font: 10px -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #1a1a1a; }
+  #svapflow .art { font: 10px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #444; }
+  #svapflow .cap { font: 15px Georgia, "Times New Roman", serif; fill: #1a1a1a; }
+  #svapflow .capb{ font: bold 15px Georgia, "Times New Roman", serif; fill: #1a1a1a; }
+  #svapflow .green  { fill: #d5e8d4; stroke: #82b366; stroke-width: 1.4; }
+  #svapflow .blue   { fill: #dae8fc; stroke: #6c8ebf; stroke-width: 1.4; }
+  #svapflow .orange { fill: #ffe6cc; stroke: #d79b00; stroke-width: 1.4; }
+  #svapflow .plain  { fill: #ffffff; stroke: #1a1a1a; stroke-width: 1.2; }
+  #svapflow .box    { fill: #ffffff; stroke: #1a1a1a; stroke-width: 1.4; }
+  #svapflow .artb   { fill: #f7f7f7; stroke: #7a7a7a; stroke-width: 1.1; stroke-dasharray: 4 3; }
+  #svapflow .e   { stroke: #1a1a1a; stroke-width: 1.5; fill: none; }
+  #svapflow .eb  { stroke: #2d6cdf; stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; }
+</style>
+<defs>
+  <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#1a1a1a"/>
+  </marker>
+  <marker id="arb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#2d6cdf"/>
+  </marker>
+</defs>
+
+<rect x="0" y="0" width="1040" height="1210" fill="#ffffff"/>
+
+<!-- ================= (1) ================= -->
+<rect class="green" x="115" y="30" width="240" height="52" rx="7"/>
+<text class="t" x="235" y="52" text-anchor="middle">(1) Testbench Generation</text>
+<text class="s" x="235" y="69" text-anchor="middle">clock/reset discovery, file lists, FPV Tcl</text>
+
+<line class="e" x1="235" y1="82" x2="235" y2="102" marker-end="url(#ar)"/>
+
+<!-- ================= (2) ================= -->
+<rect class="blue" x="115" y="104" width="240" height="52" rx="7"/>
+<text class="t" x="235" y="126" text-anchor="middle">(2) Initial Assertion Set Generation</text>
+<text class="s" x="235" y="143" text-anchor="middle">LLM fills lint-clean SVA templates</text>
+
+<line class="e" x1="235" y1="156" x2="235" y2="176" marker-end="url(#ar)"/>
+
+<!-- ================= (3) ================= -->
+<rect class="box" x="40" y="178" width="390" height="232" rx="10"/>
+<text class="hdr" x="56" y="199">(3) Syntax Closure</text>
+
+<rect class="green" x="68" y="210" width="334" height="40" rx="6"/>
+<text class="t" x="235" y="235" text-anchor="middle">A. Module Prefixing</text>
+
+<rect class="green" x="68" y="258" width="334" height="40" rx="6"/>
+<text class="t" x="235" y="283" text-anchor="middle">B. Assertion Name and Template Check</text>
+
+<rect class="green" x="68" y="306" width="334" height="40" rx="6"/>
+<text class="t" x="235" y="331" text-anchor="middle">C. SVALint Gate (fail-closed)</text>
+
+<rect class="blue" x="68" y="354" width="334" height="40" rx="6"/>
+<text class="t" x="235" y="372" text-anchor="middle">D. Correction with Lint and</text>
+<text class="t" x="235" y="386" text-anchor="middle">FPV Syntax Log</text>
+
+<path class="e" d="M 402 374 L 416 374 L 416 326 L 404 326" marker-end="url(#ar)"/>
+
+<line class="e" x1="430" y1="294" x2="606" y2="294" marker-end="url(#ar)"/>
+<text class="lbl" x="518" y="286" text-anchor="middle">lint-clean, no syntax errors</text>
+
+<!-- ================= (4) ================= -->
+<rect class="box" x="610" y="178" width="390" height="232" rx="10"/>
+<text class="hdr" x="626" y="199">(4) Assertion Set Extension</text>
+
+<rect class="blue" x="638" y="210" width="334" height="40" rx="6"/>
+<text class="t" x="805" y="235" text-anchor="middle">A. New Assertions Generation</text>
+
+<rect class="green" x="638" y="258" width="334" height="40" rx="6"/>
+<text class="t" x="805" y="283" text-anchor="middle">B. Initial Duplicate Assertion Check</text>
+
+<rect class="plain" x="638" y="306" width="334" height="40" rx="6"/>
+<text class="t" x="805" y="331" text-anchor="middle">C. (3)</text>
+
+<rect class="green" x="638" y="354" width="334" height="40" rx="6"/>
+<text class="t" x="805" y="379" text-anchor="middle">D. Final Duplicate Assertion Check</text>
+
+<path class="e" d="M 972 374 L 988 374 L 988 230 L 974 230" marker-end="url(#ar)"/>
+
+<line class="e" x1="805" y1="410" x2="805" y2="448" marker-end="url(#ar)"/>
+<text class="lbl" x="817" y="433">no new assertions in generation</text>
+
+<!-- ================= (5) ================= -->
+<rect class="box" x="40" y="450" width="960" height="162" rx="10"/>
+<text class="hdr" x="56" y="471">(5) Formal Proof and Five-Way Qualification</text>
+
+<rect class="orange" x="68" y="482" width="440" height="50" rx="6"/>
+<text class="t" x="288" y="502" text-anchor="middle">VC Formal / JasperGold</text>
+<text class="s" x="288" y="519" text-anchor="middle">prove; vacuity goals, formal core, density, COI, constraints</text>
+
+<line class="e" x1="508" y1="507" x2="538" y2="507" marker-end="url(#ar)"/>
+
+<rect class="green" x="540" y="482" width="432" height="50" rx="6"/>
+<text class="t" x="756" y="502" text-anchor="middle">Per-Property Qualification</text>
+<text class="s" x="756" y="519" text-anchor="middle">vacuity audit and assumption-dependence audit</text>
+
+<rect class="green" x="68" y="548" width="172" height="30" rx="5"/>
+<text class="pill" x="154" y="567" text-anchor="middle">proved non-vacuous</text>
+<rect class="green" x="251" y="548" width="172" height="30" rx="5"/>
+<text class="pill" x="337" y="567" text-anchor="middle">proved vacuous</text>
+<rect class="green" x="434" y="548" width="172" height="30" rx="5"/>
+<text class="pill" x="520" y="567" text-anchor="middle">failing: property mismatch</text>
+<rect class="green" x="617" y="548" width="172" height="30" rx="5"/>
+<text class="pill" x="703" y="567" text-anchor="middle">failing: missing assumption</text>
+<rect class="green" x="800" y="548" width="172" height="30" rx="5"/>
+<text class="pill" x="886" y="567" text-anchor="middle">inconclusive</text>
+
+<line class="e" x1="470" y1="612" x2="470" y2="640" marker-end="url(#ar)"/>
+<text class="lbl" x="480" y="630">failing properties</text>
+
+<!-- ================= (6) ================= -->
+<rect class="box" x="40" y="642" width="860" height="150" rx="10"/>
+<text class="hdr" x="56" y="663">(6) Environment Closure and Semantic Repair</text>
+
+<rect class="blue" x="68" y="674" width="390" height="100" rx="6"/>
+<text class="t" x="263" y="700" text-anchor="middle">A. Assumption Generation</text>
+<text class="s" x="263" y="722" text-anchor="middle">named m_ assumptions in a separate artifact,</text>
+<text class="s" x="263" y="738" text-anchor="middle">screened for lint, consistency, reachability</text>
+<text class="s" x="263" y="754" text-anchor="middle">preservation and unblocking their target</text>
+
+<rect class="blue" x="482" y="674" width="390" height="100" rx="6"/>
+<text class="t" x="677" y="700" text-anchor="middle">B. Iterative Repair of Failing Assertions</text>
+<text class="s" x="677" y="722" text-anchor="middle">counterexample-guided correction, with an</text>
+<text class="s" x="677" y="738" text-anchor="middle">adaptive stopping policy in place of a</text>
+<text class="s" x="677" y="754" text-anchor="middle">fixed attempt budget</text>
+
+<path class="eb" d="M 40 724 L 22 724 L 22 507 L 38 507" marker-end="url(#arb)"/>
+<text class="lbl" transform="translate(17,660) rotate(-90)">re-prove</text>
+
+<path class="e" d="M 950 612 L 950 812 L 275 812 L 275 832" marker-end="url(#ar)"/>
+<text class="lbl" x="600" y="806" text-anchor="middle">only properties proved non-vacuously enter the snapshot</text>
+
+<!-- ================= (7) ================= -->
+<rect class="box" x="40" y="834" width="470" height="222" rx="10"/>
+<text class="hdr" x="56" y="855">(7) Snapshot Qualification</text>
+
+<rect class="green" x="64" y="866" width="422" height="44" rx="6"/>
+<text class="t" x="275" y="885" text-anchor="middle">Metrics with one definition each</text>
+<text class="s" x="275" y="901" text-anchor="middle">vacuity, COI diversity, three checker coverages</text>
+
+<rect class="green" x="64" y="918" width="422" height="44" rx="6"/>
+<text class="t" x="275" y="937" text-anchor="middle">Cost accounting</text>
+<text class="s" x="275" y="953" text-anchor="middle">measured tokens and EUR attributed per stage</text>
+
+<rect class="green" x="64" y="970" width="422" height="44" rx="6"/>
+<text class="t" x="275" y="989" text-anchor="middle">Provenance</text>
+<text class="s" x="275" y="1005" text-anchor="middle">RTL hashes, git revision, elaboration, model, prompts</text>
+
+<rect class="artb" x="64" y="1020" width="422" height="26" rx="5"/>
+<text class="art" x="275" y="1037" text-anchor="middle">snapshot_manifest.json &#183; snapshot_metrics.json &#183; assume.svh</text>
+
+<line class="e" x1="510" y1="940" x2="528" y2="940" marker-end="url(#ar)"/>
+<text class="lbl" x="519" y="930" text-anchor="middle">frozen</text>
+
+<!-- ================= (8) ================= -->
+<rect class="box" x="530" y="834" width="470" height="222" rx="10"/>
+<text class="hdr" x="546" y="855">(8) Mutation-Validated Evaluation</text>
+
+<rect class="green" x="554" y="866" width="422" height="44" rx="6"/>
+<text class="t" x="765" y="885" text-anchor="middle">Mutant population</text>
+<text class="s" x="765" y="901" text-anchor="middle">six fault classes; undetectable edits screened out</text>
+
+<rect class="orange" x="554" y="918" width="422" height="44" rx="6"/>
+<text class="t" x="765" y="937" text-anchor="middle">Shared formal harness</text>
+<text class="s" x="765" y="953" text-anchor="middle">one artifact swapped, identical settings and timeout</text>
+
+<rect class="green" x="554" y="970" width="422" height="44" rx="6"/>
+<text class="t" x="765" y="989" text-anchor="middle">Sensitivity, assumption screen, regression</text>
+<text class="s" x="765" y="1005" text-anchor="middle">detection rate per fault class, escape analysis</text>
+
+<rect class="green" x="554" y="1020" width="422" height="26" rx="5"/>
+<text class="pill" x="765" y="1038" text-anchor="middle">Baseline comparison under one harness (LES)</text>
+
+<!-- ================= legend ================= -->
+<g transform="translate(226,1076)">
+  <rect class="green" x="0" y="0" width="118" height="28" rx="5"/>
+  <text class="pill" x="59" y="18" text-anchor="middle">Python Code</text>
+  <rect class="blue" x="134" y="0" width="118" height="28" rx="5"/>
+  <text class="pill" x="193" y="18" text-anchor="middle">Uses LLM</text>
+  <rect class="orange" x="268" y="0" width="118" height="28" rx="5"/>
+  <text class="pill" x="327" y="18" text-anchor="middle">Formal Tool</text>
+  <rect class="artb" x="402" y="0" width="118" height="28" rx="5"/>
+  <text class="pill" x="461" y="18" text-anchor="middle">Snapshot Artifact</text>
+</g>
+
+<!-- ================= caption ================= -->
+<text class="capb" x="520" y="1140" text-anchor="middle">Figure 1: SVApshot toolflow, from RTL input to a qualified, evaluated snapshot.</text>
+<text class="cap" x="520" y="1162" text-anchor="middle">Stages (1)&#8211;(4) generate and close the property set; (5) qualifies every property five ways rather than pass/fail; (6) decides</text>
+<text class="cap" x="520" y="1182" text-anchor="middle">whether a failure is the property or the environment; (7) freezes the snapshot with its provenance; and (8) measures what</text>
+<text class="cap" x="520" y="1202" text-anchor="middle">the snapshot detects, using no LLM.</text>
+
+</svg>

@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Secrets
+.env
+.env.*
+
+# Formal / sim scratch
+/ft_*/
+/vcf_projs/
+/projs/
+vcst_rtdb*/
+vcf.log*
+*.fsdb
+*.vcd
+simv
+simv.daidir/
+csrc/
+verdiLog/
+
+# Editor
+*~
+*.swp
